@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Funcionários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Cadastro de Funcionários</h1>
+</header>
+
+<form name="frm_cadastro" method="post">
+
+    <h2>Dados do Funcionário</h2>
+
+    <label for="registro">N° Registro:</label>
+    <input type="number" id="registro" name="registro">
+    <br><br>
+
+    <label for="funcionario">Funcionário:</label>
+    <input type="text" id="funcionario" name="funcionario">
+
+
+    <label for="admissao">Data de Admissão:</label>
+    <input type="date" id="admissao" name="admissao">
+    <br><br>
+
+    <label for="cargo">Cargo:</label>
+    <select id="cargo" name="cargo">
+        <option value="">Selecione</option>
+        <option value="Aux_adm">Auxiliar Administrativo</option>
+        <option value="Direc_exec">Diretor Executivo</option>
+        <option value="Ger_Admin">Gerente Administrativo</option>
+        <option value="Vend">Vendedor</option>
+        <option value="Gerente_rh">Gerente RH</option>
+        <option value="Gerente_Vendas">Gerente de Vendas</option>
+    </select>
+
+
+    <label for="qtdSal">Qtd de Salários Mínimos:</label>
+    <input type="number" id="qtdSal" name="qtdSal">
+    <br><br>
+
+    <button type="submit">Cadastrar</button>
+
+    <a href="php">Visualizar Demonstrativos de Pagamentos</a> 
+
+</form>
+
+</body>
+</html>
