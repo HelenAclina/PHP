@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetClean — PetShop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================ NAVBAR -->
+<div class="nav-brand">
+
+ PetClean
+</div>
+  </div>
+  <div class="nav-links">
+    <a href="#" class="active" data-page="home">Início</a>
+    <a href="#" data-page="clientes">Clientes</a>
+    <a href="#" data-page="pets">Pets</a>
+    <a href="#" data-page="servicos">Serviços</a>
+    <a href="#" data-page="agendamentos">Agendamentos</a>
+  </div>
+</nav>
+
+<!-- ============================================================ PAGE: HOME -->
+<div id="page-home" class="page active">
+  <div class="container">
+    <div class="home-hero">
+      <h1>Bem-vindo ao PetClean 🐾</h1>
+      <p>Gerencie seus clientes, pets, serviços e agendamentos em um só lugar.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div><div class="stat-num" id="cnt-clientes">0</div><div class="stat-label">Clientes</div></div>
+      </div>
+      <div class="stat-card">
+        <div><div class="stat-num" id="cnt-pets">0</div><div class="stat-label">Pets</div></div>
+      </div>
+      <div class="stat-card">
+        <div><div class="stat-num" id="cnt-servicos">0</div><div class="stat-label">Serviços</div></div>
+      </div>
+      <div class="stat-card">
+
+        <div><div class="stat-num" id="cnt-agendamentos">0</div><div class="stat-label">Agendamentos</div></div>
+      </div>
+    </div>
+    <div class="features-card">
+      <h2>Recursos</h2>
+      <ul class="features-list">
+        <li><div class="check-icon">✓</div> Cadastre clientes com nome, telefone e email</li>
+        <li><div class="check-icon">✓</div> Registre pets vinculados aos clientes com raça e idade</li>
+        <li><div class="check-icon">✓</div> Crie serviços personalizados com preços</li>
+        <li><div class="check-icon">✓</div> Agende serviços para os pets com data e hora</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ PAGE: CLIENTES -->
+<div id="page-clientes" class="page">
+  <div class="container">
+    <div class="page-header">
+      <h1>Clientes</h1>
+      <button class="btn btn-primary" id="btn-novo-cliente">+ Novo Cliente</button>
+    </div>
+    <div class="card table-card">
+      <table>
+        <thead><tr><th>Nome</th><th>Telefone</th><th>Email</th><th class="th-right">Ações</th></tr></thead>
+        <tbody id="tbody-clientes">
+          <tr><td class="td-empty" colspan="4">Nenhum cliente cadastrado. Clique em "Novo Cliente" para começar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ PAGE: PETS -->
+<div id="page-pets" class="page">
+  <div class="container">
+    <div class="page-header">
+      <h1>Pets</h1>
+      <button class="btn btn-primary" id="btn-novo-pet">+ Novo Pet</button>
+    </div>
+    <div class="warn-banner" id="warn-pets">⚠️ Você precisa cadastrar pelo menos um cliente antes de adicionar pets.</div>
+    <div class="card table-card">
+      <table>
+        <thead><tr><th>Nome</th><th>Raça</th><th>Idade</th><th>Dono</th><th class="th-right">Ações</th></tr></thead>
+        <tbody id="tbody-pets">
+          <tr><td class="td-empty" colspan="5">Nenhum pet cadastrado. Clique em "Novo Pet" para começar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ PAGE: SERVIÇOS -->
+<div id="page-servicos" class="page">
+  <div class="container">
+    <div class="page-header">
+      <h1>Serviços</h1>
+      <button class="btn btn-primary" id="btn-novo-servico">+ Novo Serviço</button>
+    </div>
+    <div class="card table-card">
+      <table>
+        <thead><tr><th>Nome</th><th>Preço</th><th class="th-right">Ações</th></tr></thead>
+        <tbody id="tbody-servicos">
+          <tr><td class="td-empty" colspan="3">Nenhum serviço cadastrado. Clique em "Novo Serviço" para começar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ PAGE: AGENDAMENTOS -->
+<div id="page-agendamentos" class="page">
+  <div class="container">
+    <div class="page-header">
+      <h1>Agendamentos</h1>
+      <button class="btn btn-primary" id="btn-novo-agend">+ Novo Agendamento</button>
+    </div>
+    <div class="warn-banner" id="warn-agend">⚠️ Você precisa ter pelo menos um pet e um serviço cadastrados antes de criar agendamentos.</div>
+    <div class="card table-card">
+      <table>
+        <thead><tr><th>Data</th><th>Hora</th><th>Pet</th><th>Cliente</th><th>Serviço</th><th class="th-right">Ações</th></tr></thead>
+        <tbody id="tbody-agendamentos">
+          <tr><td class="td-empty" colspan="6">Nenhum agendamento cadastrado. Clique em "Novo Agendamento" para começar.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ MODAL: CLIENTE -->
+<div class="modal-overlay" id="modal-cliente">
+  <div class="modal">
+    <button class="modal-close" data-close="modal-cliente">✕</button>
+    <h2 id="modal-cliente-title">Novo Cliente</h2>
+    <input type="hidden" id="cliente-edit-id" />
+    <div class="form-group"><label for="cliente-nome">Nome</label><input type="text" id="cliente-nome" placeholder="Ex: Maria Souza" /></div>
+    <div class="form-group"><label for="cliente-tel">Telefone</label><input type="tel" id="cliente-tel" placeholder="(11) 99999-9999" /></div>
+    <div class="form-group"><label for="cliente-email">Email</label><input type="email" id="cliente-email" placeholder="email@exemplo.com" /></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" data-close="modal-cliente">Cancelar</button>
+      <button class="btn btn-primary" id="btn-salvar-cliente">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ MODAL: PET -->
+<div class="modal-overlay" id="modal-pet">
+  <div class="modal">
+    <button class="modal-close" data-close="modal-pet">✕</button>
+    <h2 id="modal-pet-title">Novo Pet</h2>
+    <input type="hidden" id="pet-edit-id" />
+    <div class="form-group"><label for="pet-nome">Nome do Pet</label><input type="text" id="pet-nome" placeholder="Ex: Bolinha" /></div>
+    <div class="form-group"><label for="pet-raca">Raça</label><input type="text" id="pet-raca" placeholder="Ex: Poodle" /></div>
+    <div class="form-group"><label for="pet-idade">Idade (anos)</label><input type="number" id="pet-idade" placeholder="Ex: 3" min="0" /></div>
+    <div class="form-group"><label for="pet-dono">Dono</label><select id="pet-dono"></select></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" data-close="modal-pet">Cancelar</button>
+      <button class="btn btn-primary" id="btn-salvar-pet">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ MODAL: SERVIÇO -->
+<div class="modal-overlay" id="modal-servico">
+  <div class="modal">
+    <button class="modal-close" data-close="modal-servico">✕</button>
+    <h2 id="modal-servico-title">Novo Serviço</h2>
+    <input type="hidden" id="servico-edit-id" />
+    <div class="form-group"><label for="servico-nome">Nome do Serviço</label><input type="text" id="servico-nome" placeholder="Ex: Banho e Tosa" /></div>
+    <div class="form-group"><label for="servico-preco">Preço (R$)</label><input type="number" id="servico-preco" placeholder="Ex: 80.00" step="0.01" min="0" /></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" data-close="modal-servico">Cancelar</button>
+      <button class="btn btn-primary" id="btn-salvar-servico">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ MODAL: AGENDAMENTO -->
+<div class="modal-overlay" id="modal-agendamento">
+  <div class="modal">
+    <button class="modal-close" data-close="modal-agendamento">✕</button>
+    <h2 id="modal-agend-title">Novo Agendamento</h2>
+    <input type="hidden" id="agend-edit-id" />
+    <div class="form-group"><label for="agend-data">Data</label><input type="date" id="agend-data" /></div>
+    <div class="form-group"><label for="agend-hora">Hora</label><input type="time" id="agend-hora" /></div>
+    <div class="form-group"><label for="agend-pet">Pet</label><select id="agend-pet"></select></div>
+    <div class="form-group"><label for="agend-servico">Serviço</label><select id="agend-servico"></select></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" data-close="modal-agendamento">Cancelar</button>
+      <button class="btn btn-primary" id="btn-salvar-agend">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
