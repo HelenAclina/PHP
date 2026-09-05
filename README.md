@@ -1,51 +1,23 @@
-# 🐘 PHP — Projetos e Exercícios
+# PHP — Projetos e Exercícios
 
-Coleção de projetos em PHP focada em lógica, padrões estruturais e fundamentos
-de desenvolvimento web — documentando minha evolução dos princípios de
-programação até aplicações web funcionais.
+Coleção de projetos e exercícios em PHP: lógica, formulários, validações e CRUD com MySQL.
 
-## 📂 Projetos
+## Projetos com repositório dedicado
 
-| Projeto | Descrição | Stack |
+Os dois principais projetos desta coleção agora têm repositório próprio, com documentação completa:
+
+| Projeto | Sobre | Stack |
 |---|---|---|
-| 🐾 **[PetClean](PetClean/)** | Site de serviços para pet shop — apresentação da loja, serviços e contato | HTML5, CSS3, JavaScript |
-| 📦 **[SistemaDeProdutos](SistemaDeProdutos/)** | Sistema de cadastro e gerenciamento de produtos | PHP, MySQL |
-| 📚 `disciplina-*` | Exercícios das disciplinas de Desenvolvimento de Software/Sistemas II | PHP |
+| **[PetClean](https://github.com/HelenAclina/petclean)** | Sistema de gerenciamento para pet shop — clientes, pets, serviços e agendamentos | JavaScript, HTML, CSS |
+| **[Sistema de Produtos](https://github.com/HelenAclina/sistema-de-produtos)** | Controle de estoque e vendas com validações server-side | PHP, MySQL |
 
-## 🖼️ Screenshots
+## Exercícios das disciplinas
 
-| PetClean — Home |
-|---|
-| ![PetClean](PetClean/img/captura1.PNG) |
+| Pasta | Conteúdo |
+|---|---|
+| `disciplina-DesenvolvimentoDe SoftwareII` | Exercícios da disciplina — formulários, validações e integração com banco |
+| `disciplinaDesenvolvimento DeSistemasII` | Exercícios da disciplina — lógica e páginas dinâmicas |
 
-<!-- 💡 Dica: adicione mais screenshots em uma tabela 2x2 (home, serviços, sistema de produtos) -->
+## Autora
 
-## ▶️ Como executar
-
-**PetClean** (front-end estático):
-```bash
-# basta abrir o index.html no navegador, ou servir localmente:
-cd PetClean
-php -S localhost:8000
-```
-
-**SistemaDeProdutos** (PHP + MySQL):
-```bash
-# 1. Configure o acesso ao banco no arquivo de conexão
-# 2. Suba um servidor PHP:
-cd SistemaDeProdutos
-php -S localhost:8000
-```
-
-## 🎯 Aprendizados
-
-- Estruturação de páginas web com HTML semântico e CSS
-- Manipulação de DOM e validações com JavaScript
-- Formulários PHP com tratamento de dados
-- Integração PHP + MySQL (CRUD)
-
-## 🔮 Próximos passos
-
-- [ ] Evoluir o PetClean com área de agendamento funcional
-- [ ] Login e autenticação no Sistema de Produtos
-- [ ] Deploy ao vivo (demo clicável)
+**Helen Aclina** · [@HelenAclina](https://github.com/HelenAclina)
